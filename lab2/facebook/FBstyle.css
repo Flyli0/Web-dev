@@ -58,7 +58,8 @@ form{
     border: none;
     border-radius: 10px;
     background-color: white;
-    box-shadow: 2px 2px 2px 2px grey;
+    box-shadow: 0px 0px 3px 3px #b6b6b6;
+
 }
 
 .logbutton{
