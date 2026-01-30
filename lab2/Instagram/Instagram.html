@@ -7,31 +7,35 @@
     <link rel = "stylesheet" type = "text/css" href = "IG.css">
 </head>
 <body>
-    <section>
+    <section id = "rightArea">
         <img src = "mainlogo.png" alt = "instagram" id = "logo">
-        <h1>Посмотрите, какими моментами из жизни поделились ваши близкие друзья.</h1>
+        <div id = "textbox">
+            <p>Посмотрите, какими моментами из</p>
+            <p>жизни поделились ваши <strong>близкие</strong></p>
+            <p><strong>друзья</strong>.</p>
+        </div>
         <img src = "instabig.png" alt = "instagram is the social media" id = "bigpic">
+    </section>
         <aside id = "loginform">
             <form id = "login">
                 <fieldset>
                 <label>Войти в Instagram</label>
-                <input type = "number" type = "email" type = "text" placeholder = "Имя пользователя, номер мобильного телефона или электронный адрес" class = "logbutton">
+                <input type = "tel" type = "email" type = "text" placeholder = "Имя пользователя, номер мобильного телефона или электронный адрес" class = "logbutton">
                 <input type = "password" placeholder="Пароль" class = "logbutton">
-                <button class = "in">Войти</button>
-                <button class = "in">Забыли пароль?</button>
+                <button class = "in" id = "come">Войти</button>
+                <button class = "in" id = 'forgot'>Забыли пароль?</button>
                 </fieldset>
-                <fieldset>
-                <button class = "in"><img src = "Facebook_logo_PNG12.png" id = "facebook" alt = "log in by facebook"> Войти через Facebook</button>
-                <button class = "in">Создать новый Аккаунт</button>
+                <fieldset id = "second">
+                    <img src = "Facebook_logo_PNG12.png" id = "facebook" alt = "log in by facebook">
+                <button class = "in" id = "fb">Войти через Facebook </button>
+                <button class = "in" id = "new">Создать новый Аккаунт</button>
                 </fieldset>
             </form>
-            <img src = "meta-brand.png" alt = "meta">
+            <img src = "meta-brand.png" alt = "meta" id = "meta">
         </aside>
-        <footer>
-            <p>footer text</p>
-        </footer>
-    </section>
-
-
+    <footer>
+        <hr>
+        <p>footer text</p>
+    </footer>
 </body>
 </html>
