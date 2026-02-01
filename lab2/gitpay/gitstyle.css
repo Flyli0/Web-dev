@@ -1,6 +1,7 @@
 body{
     margin:0 0 0 0;
     padding:0;
+    position:relative;
 }
 nav{
     position: relative;
@@ -61,11 +62,9 @@ nav{
     position:relative;
     display: flex;
     width: 80%;
-    margin-left:10%;
-    height: 120vh;
     justify-content: space-between ;
     margin-top:7%;
-
+    margin:auto;
 }
 
 .license{
