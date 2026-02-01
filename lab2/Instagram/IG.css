@@ -22,7 +22,7 @@ aside{
 }
 
 #logo{
-    position: relative;
+    position: absolute;
     height: 6vw;
     margin-top: 2.3vw;
     margin-left: 2vw;
@@ -30,7 +30,7 @@ aside{
 }
 
 #textbox{
-    margin-left: 4.3vw;
+    margin-left: 5vw;
     margin-top: 7.5vw;
     width: 75%;
     display: block;
@@ -61,7 +61,7 @@ strong{
     display: block;
 
     float:right;
-    width: 42.5vw;
+    width: 42.4vw;
     height: 91vh;
 }
 
