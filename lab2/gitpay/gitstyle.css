@@ -215,3 +215,8 @@ li{
 .black:hover{
     background-color: #303030;
 }
+
+#recommended{
+    display: block;
+    height: 100%;
+}
