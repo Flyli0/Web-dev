@@ -1,0 +1,21 @@
+#main{
+    display: block;
+}
+body{
+    transition: background-color 0.3s ease ;
+}
+.color-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 20px;
+}
+
+.color-btn{
+    display: flex;
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 10px;
+    align-content: center;
+}
