@@ -5,10 +5,11 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector:'app-user',
-  template: 'Username {{username}}',
+  template:
+    '@for(a of username;track a){<p>Username {{a}}<p>}',
 })
 export class User {
-  username = "Young Tech"
+  username = ['Ivan','Vanya','Amongasik']
 }
 
 @Component({
@@ -24,4 +25,14 @@ export class User {
 export class App {
   protected readonly title = signal('online-store');
   name = "Kirill";
+}
+
+@Component({
+  selector: 'app-login',
+  template: '@if(isLoggedIn){' +
+    '<span>Yes, server is running</span>' +
+    '}'
+})
+export class Login {
+  isLoggedIn = true;
 }
