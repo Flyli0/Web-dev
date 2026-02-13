@@ -1,20 +1,44 @@
-import { Component, signal , output} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, signal , output, Injectable} from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
+import {FormsModule,ReactiveFormsModule, FormGroup, FormControl, Validators} from '@angular/forms';
+import {UpperCasePipe} from '@angular/common';
 
 
 @Component({
   selector:'app-user',
   template:
-    ' @defer (on viewport){'+
-     '@for(a of username;track a){<p>Username {{a}}<p>}}' +
+    ' @defer(on viewport){'+
+     '@for(a of username;track a){<p>Username {{a}}<p>}' +
+    '<p>Favorite framework: {{myForm.value.userFramework | uppercase}}</p>}' +
     '@placeholder{' +
     '<p>future</p>}' +
     '@loading(minimum 2s){' +
-    '<p>Loading...</p>}',
+    '<p>Loading...</p>}' +
+    '<nav>\n' +
+    '      <a routerLink="/">Home</a>\n' +
+    '      |\n' +
+    '    </nav>' +
+    '<label for = "form">My first angular form</label>' +
+    '<form [formGroup]="myForm" (ngSubmit)="handleSubmit()">' +
+    '<input type = "text" id = "form" placeholder = "Insert favorit framework" formControlName = "userFramework"\>' +
+    '<button type = "submit" [disabled] = "!myForm.valid">Submint</button>' +
+    '</form>',
+  imports: [RouterOutlet, RouterLink, ReactiveFormsModule, UpperCasePipe],
 })
 export class User {
   username = ['Ivan','Vanya','Amongasik']
+  fav_framework = '';
+  myForm = new FormGroup({
+    userFramework: new FormControl('', Validators.required),
+  });
+  handleSubmit(){
+    alert(this.myForm.value.userFramework);
+  }
 }
+
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -86,4 +110,9 @@ export class Child {
   }
 }
 
-
+@Injectable({
+  providedIn: 'root',
+})
+class UserService {
+  //some dependency
+}
