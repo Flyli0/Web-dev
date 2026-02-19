@@ -1,8 +1,8 @@
 <p>Favorites<3 {{favoriteCount()}}</p>
 
 <div class = "visibility">
-  <button (click)="showFavoriteOnly(true)" > Sh fav only</button>
-  <button (click)="showFavoriteOnly(false)">Sh all</button>
+  <button (click)="showFavoriteOnly(true)" > Show favorites only</button>
+  <button (click)="showFavoriteOnly(false)">Show all</button>
 </div>
 <div class = "grid">
   @if(displayedProducts() .length == 0){

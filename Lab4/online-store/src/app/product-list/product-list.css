@@ -5,5 +5,21 @@
   padding: 20px;
 }
 
+.visibility button{
+  cursor: pointer;
+  border: solid 2px #111e0c;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  margin-right: 50px;
+  background-color: #ea4040;
+  color: #dff4b4;
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
 
-
+.visibility button:hover{
+  background-color: #fa4747;
+  color: white;
+  border: solid 2px #e4177e;
+}

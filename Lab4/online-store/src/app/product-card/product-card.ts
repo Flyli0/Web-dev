@@ -13,7 +13,11 @@ export class ProductCard {
   product = input<Product>();
   toggle = output<number>();
   isFavorite = input<boolean>(false);
+  likenum = signal<number>(0);
 
+  increment(){
+    this.likenum.update(likenum=>likenum+1)
+  }
 
   image(isFavorite: boolean) {
     if (isFavorite) {

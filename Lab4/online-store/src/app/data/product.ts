@@ -30,7 +30,7 @@ export const products: Product[] = [
   {
     id:3,
     name: "Стул SEM BRAND Троя, 95x40x45 см, серый",
-    description: "Если у вас есть два таких стула выбор станет ещё сложнее.",
+    description: "Стул Алексея Навального!.",
     price: 7885,
     rating: 4.5,
     image: "https://resources.cdn-kaspi.kz/img/m/p/p72/p0f/74529125.png?format=gallery-medium",

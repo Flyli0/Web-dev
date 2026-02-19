@@ -13,5 +13,9 @@
   <button class="share-btn" (click)="shareProduct(product()!.link)">
     Share
   </button></div>
+  <div class = "buttons">
+  <button class = "like"><img src = "assets/images/thumbup.png" alt = "like" (click)="increment()" >{{likenum()}}</button>
+  <button class = "delete">remove</button>
+  </div>
   <a class = 'btn' [href] = "product()!.link" target = "_blank">Buy on Kaspi</a>
 </div>
