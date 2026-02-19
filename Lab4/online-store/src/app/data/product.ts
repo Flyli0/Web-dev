@@ -65,7 +65,7 @@ export const products: Product[] = [
     link: "https://kaspi.kz/shop/p/naushniki-air-pro-2-belyi-118366664/?c=750000000"
   },
   {
-    id:2,
+    id:6,
     name: "Двойной аэрогриль SPRX SPRX-8017D 10 л черный",
     description: "Современный смартфон Apple с мощным процессором и отличной камерой. Поддерживает 5G и имеет яркий дисплей.",
     price: 38000,
@@ -77,7 +77,7 @@ export const products: Product[] = [
     link: "https://kaspi.kz/shop/p/sprx-sprx-8017d-10-l-chernyi-144297982/?c=750000000"
   },
   {
-    id:2,
+    id:7,
     name: "Двойной аэрогриль SPRX SPRX-8017D 10 л черный",
     description: "Современный смартфон Apple с мощным процессором и отличной камерой. Поддерживает 5G и имеет яркий дисплей.",
     price: 38000,
@@ -89,7 +89,7 @@ export const products: Product[] = [
     link: "https://kaspi.kz/shop/p/sprx-sprx-8017d-10-l-chernyi-144297982/?c=750000000"
   },
   {
-    id:2,
+    id:8,
     name: "Двойной аэрогриль SPRX SPRX-8017D 10 л черный",
     description: "Современный смартфон Apple с мощным процессором и отличной камерой. Поддерживает 5G и имеет яркий дисплей.",
     price: 38000,

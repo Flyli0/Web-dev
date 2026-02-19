@@ -1,18 +1,16 @@
+<p>Favorites<3 {{favoriteCount()}}</p>
 
+<div class = "visibility">
+  <button (click)="showFavoriteOnly(true)" > Sh fav only</button>
+  <button (click)="showFavoriteOnly(false)">Sh all</button>
+</div>
 <div class = "grid">
-  <div class = "card" *ngFor = "let p of products">
-    <section class = "image">
-      <a [href] = "p.link" target = '_blank'>
-        <img [src] = "p.image" [alt] = "p.name">
-      </a>
-    </section>
-    <h2> {{p.name}} </h2>
-    <p class = 'desc'>{{p.description}}</p>
-    <p class = 'price'>{{p.price}}₸</p>
-    <p class = 'rating'>⭐{{p.rating}}</p>
-    <button class="share-btn" (click)="shareProduct(p.link)">
-      Share
-    </button>
-    <a class = 'btn' [href] = "p.link" target = "_blank">Buy on Kaspi</a>
-  </div>
+  @if(displayedProducts() .length == 0){
+    <p>No products found</p>
+  }
+  @else{
+    @for(p of displayedProducts(); track p.id){
+      <app-product-card [product] = "p" (toggle)="toggleFavorite($event)" [isFavorite] = isFavorite(p.id)></app-product-card>
+    }
+  }
 </div>
