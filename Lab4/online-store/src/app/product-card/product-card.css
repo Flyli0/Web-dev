@@ -68,6 +68,7 @@
   background-color: white;
   border:none;
   height: 50px;
+  z-index: 291;
 }
 
 .share-btn{

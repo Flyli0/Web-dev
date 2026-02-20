@@ -5,12 +5,15 @@
   <button (click)="showFavoriteOnly(false)">Show all</button>
 </div>
 <div class = "grid">
-  @if(displayedProducts() .length == 0){
+  @if(filteredProducts() .length == 0){
+    <p>Choose category</p>
+  }
+  @else if(displayedProducts() .length == 0){
     <p>No products found</p>
   }
   @else{
     @for(p of displayedProducts(); track p.id){
-      <app-product-card [product] = "p" (toggle)="toggleFavorite($event)" [isFavorite] = isFavorite(p.id)></app-product-card>
+      <app-product-card [product] = "p" (toggle)="toggleFavorite($event)" [isFavorite] = "isFavorite(p.id)" (remove)="remove($event)"></app-product-card>
     }
   }
 </div>

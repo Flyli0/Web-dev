@@ -1,3 +1,6 @@
-<app-product-list></app-product-list>
+@for(c of categories(); track c.id){
+  <button (click) = "show(c.id)">{{c.name}}</button>
+}
+<app-product-list [showingCategory]="ShowId()"></app-product-list>
 
 

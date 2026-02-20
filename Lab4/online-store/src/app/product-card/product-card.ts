@@ -14,6 +14,20 @@ export class ProductCard {
   toggle = output<number>();
   isFavorite = input<boolean>(false);
   likenum = signal<number>(0);
+  trashcan = "assets/images/traash.png";
+  remove = output<number>();
+
+  onRemove(){
+    this.remove.emit(this.product()!.id);
+    console.log("remove", this.product());
+  }
+  ChangeImg(){
+    this.trashcan = "assets/images/traash2.png";
+  }
+
+  ChangeBack(){
+    this.trashcan = "assets/images/traash.png";
+  }
 
   increment(){
     this.likenum.update(likenum=>likenum+1)
