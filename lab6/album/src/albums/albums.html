@@ -1,0 +1,8 @@
+<div>
+@for(album of albumList(); track album.id){
+    <p>This ALBUM is:</p>
+    <p><a [routerLink]="['/albums/:{{album.id}}']">album ID: {{album.id}}</a></p>
+    <p>title: {{album.title}}</p>
+    <hr>
+}
+</div>

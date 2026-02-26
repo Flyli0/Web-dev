@@ -211,7 +211,7 @@ export const products: Product[] = [
   {
     id:16,
     name: "Наушники Sennheiser EW IEM G4-G серый",
-    description: "Это наушники?! ДА! сигма сигма боой и т д и т п",
+    description: "Это наушники?! ДА! и т д и т п",
     price: 612690,
     rating: 4.8,
     image: "https://resources.cdn-kaspi.kz/img/m/p/h8e/hbb/66822388744222.jpg?format=gallery-medium",

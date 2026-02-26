@@ -1,4 +1,4 @@
-# OnlineStore
+# Album
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
 
@@ -28,7 +28,7 @@ ng generate --help
 
 ## Building
 
-To build the project run 
+To build the project run:
 
 ```bash
 ng build

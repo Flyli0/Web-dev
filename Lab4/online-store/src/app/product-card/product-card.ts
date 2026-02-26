@@ -16,6 +16,7 @@ export class ProductCard {
   likenum = signal<number>(0);
   trashcan = "assets/images/traash.png";
   remove = output<number>();
+  viewMore = output<Product>();
 
   onRemove(){
     this.remove.emit(this.product()!.id);
@@ -56,5 +57,10 @@ export class ProductCard {
       navigator.clipboard.writeText(link);
       alert("Share не поддерживается, ссылка скопирована!");
     }
+  }
+
+  onViewMore(){
+    this.viewMore.emit(this.product()!);
+    console.log(this.product()!.name);
   }
 }

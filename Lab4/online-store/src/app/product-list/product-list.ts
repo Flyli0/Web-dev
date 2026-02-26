@@ -4,13 +4,15 @@ import { Product } from '../models/product.model';
 import {CommonModule} from '@angular/common';
 import {ProductCard} from '../product-card/product-card';
 import {FormsModule} from '@angular/forms';
+import {Modal} from '../components/modal/modal';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, ProductCard,FormsModule],
+  imports: [CommonModule, ProductCard,FormsModule, Modal],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
+
 
 })
 export class ProductList {
@@ -70,4 +72,21 @@ export class ProductList {
      this.showFavorites.set(state);
     }
 
+
+    selectedProduct = signal<Product|null>(null);
+    isModalOpen = signal(false);
+    openQuickView(product:Product) {
+      this.selectedProduct.set(product);
+      this.isModalOpen.set(true);
+      console.log(this.selectedProduct()!.name);
+      console.log(this.isModalOpen());
+      if(this.selectedProduct()){
+        console.log(this.selectedProduct());
+      }
+    }
+
+    closeQuickView() {
+      this.selectedProduct.set(null);
+      this.isModalOpen.set(false);
+    }
 }

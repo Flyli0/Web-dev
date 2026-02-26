@@ -1,5 +1,13 @@
 <p>Favorites<3 {{favoriteCount()}}</p>
 
+@if (selectedProduct()) {
+  <app-modal
+    [product]="selectedProduct()!"
+    [isOpen]="isModalOpen()"
+    (closeModal)="closeQuickView()">
+  </app-modal>
+}
+
 <div class = "visibility">
   <button (click)="showFavoriteOnly(true)" > Show favorites only</button>
   <button (click)="showFavoriteOnly(false)">Show all</button>
@@ -13,7 +21,10 @@
   }
   @else{
     @for(p of displayedProducts(); track p.id){
-      <app-product-card [product] = "p" (toggle)="toggleFavorite($event)" [isFavorite] = "isFavorite(p.id)" (remove)="remove($event)"></app-product-card>
+      <app-product-card [product] = "p" (toggle)="toggleFavorite($event)" [isFavorite] = "isFavorite(p.id)" (remove)="remove($event)" (viewMore)="openQuickView($event)"></app-product-card>
+
     }
   }
 </div>
+
+
