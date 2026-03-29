@@ -3,6 +3,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Product, Category
 from .serializers import ProductSerializer, CategorySerializer
+from rest_framework.viewsets import ModelViewSet
+from rest_framework.generics import ListAPIView
 
 
 # Create your views here.
@@ -62,3 +64,18 @@ class CategoryProductView(APIView):
         products = Product.objects.filter(category=category)
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
+
+
+class ProductViewSet(ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+class CategoriesViewSet(ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+class ProductsByCategoryListView(ListAPIView):
+    serializer_class = ProductSerializer
+    def get_queryset(self):
+        category_id = self.kwargs['id']
+        return Product.objects.filter(category_id=category_id)
