@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/Lab4/online-store/.angular" />
+      <excludeFolder url="file://$MODULE_DIR$/Lab4/online-store/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/Lab4/temp/.angular/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/Lab4/temp/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/inclass/todo/.angular/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/inclass/todo/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/lab6/album/.angular/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/lab6/album/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/lab8/lab8veb/Include" />
+      <excludeFolder url="file://$MODULE_DIR$/lab8/lab8veb/Lib" />
+      <excludeFolder url="file://$MODULE_DIR$/lab8/lab8veb/Scripts" />
+    </content>
     <orderEntry type="jdk" jdkName="Python 3.13" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
