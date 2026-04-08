@@ -7,7 +7,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.generics import ListAPIView
 
 
-# Create your views here.
+# Create your viewss here.
 class ProductView(APIView):
     def get(self, request):
         products = Product.objects.all()
